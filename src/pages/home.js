@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../index.css";
 import {
-  Navigate,
   useLocation,
   useNavigate,
   useOutlet,
@@ -43,6 +42,7 @@ export default function Home(props) {
             <nav className="flex-1 space-y-1 px-2 pb-4">
               <img
                 src="logo.png"
+                alt="logo"
                 className="rounded-md h-16 w-32 fixed mb-8 relative ml-8"
               />
               {navigation.map((item) => (
@@ -84,11 +84,12 @@ export default function Home(props) {
           </button>
           <div className="flex flex-1 justify-between px-4">
             <div className="flex flex-1">
-              <img src="logo.png" className="rounded-md h-16 w-28 fixed" />
+              <img src="logo.png" alt="logo" className="rounded-md h-16 w-28 fixed" />
               <form className="flex w-full md:ml-32" action="#" method="GET">
                 <div className="w-96 h-10 search_bar_bg_color flex mt-3 ml-32">
                   <img
                     src="search-icon.png"
+                    alt="search icon"
                     className="m-2 h-5 w-5 float-left "
                   />
                   <input

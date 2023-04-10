@@ -15,7 +15,6 @@ export default function Cards(props){
             const newState = {
               title: action.title,
               key:action.key,
-              content:action.content,
             }
             formDetailsCtx.dispatchedState(
             {
@@ -39,8 +38,7 @@ export default function Cards(props){
         className="absolute top-0 right-0 text-left"
         onClick={() => {setFormDetails({
             title: props.data.title,
-            key: props.data.key,
-            content: props.data.content
+            key: props.data.key
         })}}>
         <PencilIcon className="h-4 w-4 text-red-700"/>
         </button>
