@@ -1,48 +1,32 @@
-import react, { createContext, useReducer } from 'react';
-const initialForm = {
-    key: "",
-    name: "",
-    subDesc:"",
-    desc: "",
-    
-}
+import { createContext, useReducer } from "react";
 
+const initialForm = {
+  key: "initialLoad",
+  title:"",
+  data: [],
+  props: [],
+};
 const editFormReducer = (state, action) => {
-    if(action.type === "PREFILL"){
-        action.props.editFormHandler();
-        return action.payload;  
-    }
-    return state;
-}
+  if (action.type === "PREFILL") {
+    action.props.editFormHandler();
+    return action.payload;
+  }
+  return state;
+};
 
 export const EditFormContext = createContext({
-    key: "",
-    title: "",
-    content: "",
-    props:[],
-    dispatchedState: () => {}
-  });
+  key: "",
+  title: "",
+  content: "",
+  props: [],
+});
 
 export const EditFormProvider = (props) => {
-    
-    const [state, dispatchedState] = useReducer(editFormReducer, initialForm);
+  const [state, dispatchedState] = useReducer(editFormReducer, initialForm);
 
-    const editFormVals = {
-        key: "",
-        title:"",
-        content:"",
-        props:"",
-        details: () => {}
-    }
-
-    return (
-        <EditFormContext.Provider
-        value={{...state, dispatchedState}}>
-            {props.children}
-        </EditFormContext.Provider>
-    )
-    
-}
-
-
-
+  return (
+    <EditFormContext.Provider value={{ ...state, dispatchedState }}>
+      {props.children}
+    </EditFormContext.Provider>
+  );
+};

@@ -63,3 +63,9 @@ body {
   margin-top: 35%;
   background-color: white;
 }
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
