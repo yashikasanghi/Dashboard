@@ -1,11 +1,6 @@
-import React, {useState, useContext, useReducer} from "react";
+import React, { useContext, useReducer} from "react";
 import { PencilIcon } from "@heroicons/react/20/solid";
 import { EditFormContext } from "../context/editFormContext";
-
-const initialForm = {
-    key: "",
-    title: "",
-};
 
 export default function Cards(props){
     const formDetailsCtx = useContext(EditFormContext);

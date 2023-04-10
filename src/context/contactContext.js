@@ -68,7 +68,7 @@ const initialContactValue = {
 const contactReducer = (state, action) => {
   if (action.type === "DELETE") {
     const newData = state.data.filter((obj) => obj.id !== action.key);
-    const newState = { ...state, data: newData };
+    const newState = { ...state, data: newData, noOfContacts: newData.length };
     return newState;
   }
   return state;

@@ -32,7 +32,20 @@ const dummyStatemnets = [
 const statementsReducer = (state, action) => {
   if (action.type === "DELETE") {
     const newData = state.data.filter((obj) => obj.id !== action.key);
-    const newState = { ...state, data: newData };
+    const newState = { ...state, data: newData, noOfStatements: newData.length };
+    return newState;
+  }else if(action.type === 'EDIT'){
+    const newData = state.data.map((item) =>
+  (item.id === action.id) ? {...item, content: action.statement} : {...item}
+  ) 
+  const newState = {...state, data: newData};
+  return newState;
+  }else if(action.type === 'NEWSTATEMENT'){
+    state.data.push({
+      id: action.id,
+      content: action.statement
+    });
+    const newState = {...state, noOfStatements: state.data.length};
     return newState;
   }
   return state;
