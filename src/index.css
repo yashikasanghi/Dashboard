@@ -21,11 +21,11 @@ body {
 }
 
 .privacy-margin {
-  margin-left: 21rem;
+  margin-left: 19rem;
 }
 
 .tc-margin {
-  margin-left: 30rem;
+  margin-left: 27rem;
 }
 
 .backdrop {
@@ -68,4 +68,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.font{
+  font-size: .6rem;
 }

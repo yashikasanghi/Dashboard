@@ -27,11 +27,11 @@ export default function Info(props) {
           <div className="float-left">
             <div className="mb-2">
               <EnvelopeIcon className="h-4 w-4 text-gray-400 mr-1 inline-block mr-4" />
-              <span className="text-sm">
+              <span className="text-xs">
                 {contactCtx.data[0].primaryEmail} /
               </span>
               <br />
-              <span className="ml-8 text-sm">
+              <span className="ml-8 text-xs">
                 {contactCtx.data[0].secondaryEmail}
               </span>
             </div>
@@ -73,19 +73,19 @@ export default function Info(props) {
       content: (
         <div className="mt-4">
           <div className="inline-block mr-4 text-center">
-            <img src="globe.png" alt="globe" className="h-7 w-7 ml-2" />
+            <img src="globe.png" alt="globe" className="h-6 w-6 ml-2" />
             <span className="text-xs">Website</span>
           </div>
           <div className="inline-block mr-4 text-center">
-            <img src="instagram.png" alt="instagram" className="h-6 w-6 ml-4" />
+            <img src="instagram.png" alt="instagram" className="h-5 w-5 ml-4" />
             <span className="text-xs">Instagram</span>
           </div>
           <div className="inline-block mr-4">
-            <img src="facebook.png" alt="facebook" className="h-6 w-6 ml-4" />
+            <img src="facebook.png" alt="facebook" className="h-5 w-5 ml-4" />
             <span className="text-xs">Facebook</span>
           </div>
           <div className="inline-block">
-            <img src="twitter.png" alt="twitter" className="h-6 w-6 ml-2" />
+            <img src="twitter.png" alt="twitter" className="h-5 w-5 ml-2" />
             <span className="text-xs">Twitter</span>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function Info(props) {
       title: "Statement",
       content: (
         <div className="flex relative justify-between">
-          <div className="w-56 h-32 text-xs">
+          <div className="w-56 h-32 text-xs truncate">
             {statementCtx.data[0].content}
           </div>
 

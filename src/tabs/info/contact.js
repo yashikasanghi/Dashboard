@@ -30,10 +30,10 @@ export default function Contact(props) {
           </p>
 
           {contactCtx.data.map((info) => (
-            <div className="m-4 w-96 border border-gary-400 p-8 rounded-lg text-sm" key={info.id}>
+            <div className="m-4 w-96 border border-gary-400 px-8 py-4 rounded-lg text-sm" key={info.id}>
               <div className="flex relative">
                 <UserCircleIcon className="h-6 w-6 mr-4 text-gray-400" />
-                <h1 className="">{info.name}</h1>
+                <h1 className="font-bold">{info.name}</h1>
                 <TrashIcon className="h-4 w-4 mr-4 text-red-700 absolute right-8 cursor-pointer" 
                 onClick={() => contactCtx.dispatchedContactState({type: 'DELETE', key:info.id})}
                 />
@@ -42,7 +42,7 @@ export default function Contact(props) {
                   onClick={addContactHandler}
                 />
               </div>
-              <div className="flex my-8">
+              <div className="flex my-4">
                 <EnvelopeIcon className="h-6 w-6 mr-4 text-gray-400" />
                 <h2>
                   {info.emails
@@ -64,9 +64,7 @@ export default function Contact(props) {
               </div>
             </div>
           ))}
-          <button className="bg-red-700 text-white w-5/6 py-2 rounded-lg ml-8 mb-4">
-            Add New Contact
-          </button>
+          
           <button className="bg-red-700 text-white w-5/6 py-2 rounded-lg ml-8">
             Save
           </button>

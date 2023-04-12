@@ -20,7 +20,7 @@ export default function EditForm(props){
         aria-hidden="true"
         onClick={props.closeEditFormHandler}
       />
-       <h1 className="inline-block text-2xl font-bold ml-4 mt-4">{formCtx.title}</h1> 
+       <h1 className="inline-block text-xl font-bold ml-4 mt-4">{formCtx.title}</h1> 
         </div>
         
         {(formCtx.key === 'contact') ? <Contact/> : <></>}

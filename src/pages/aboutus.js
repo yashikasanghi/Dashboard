@@ -67,17 +67,17 @@ export default function AboutUs() {
       )}
  
       <>
-        <h1 className="text-black text-2xl font-bold">About Us</h1>
+        <h1 className="text-black text-xl font-bold mb-1">About Us</h1>
         <img
           src="digital.jpg"
-          className="rounded-md h-28 w-58 fixed mb-2 mt-8 inline-block relative"
+          className="rounded-md h-20 w-58 fixed inline-block relative"
         />
         <CheckCircleIcon className="text-gray-300 h-6 w-6 mr-2 inline-block relative" />
         <a className="text-blue-400 decoration-blue-400 underline underline-offset-4 text-sm">
           Verified Company
         </a>
         <div className="flex">
-          <p className="text-gray-600 w-9/12 mb-10">{displayEditBox.subDesc}</p>
+          <p className="text-gray-600 text-sm w-9/12 mb-2 ml-4">{displayEditBox.subDesc}</p>
           <PencilIcon
             className="h-4 w-4 text-red-700 cursor-pointer"
             onClick={() => {
@@ -87,7 +87,7 @@ export default function AboutUs() {
         </div>
         {dummyTabs.map((tab) => (
           <button
-            className="text-gray-600 inline-block m-4 text-md "
+            className="text-gray-600 inline-block m-4 text-sm "
             onClick={() => tabHandler(tab)}
             key={tab.title}
           >

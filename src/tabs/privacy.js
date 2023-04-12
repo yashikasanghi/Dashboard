@@ -127,7 +127,7 @@ export default function Privacy(props) {
         />
       )}
 
-      <hr className="border-red-700 w-32 z-10 privacy-margin" />
+      <hr className="border-red-700 w-28 z-10 privacy-margin" />
       <div className="p-6 flex">
         <div className="w-2/3">
           <div className="flex">
@@ -149,7 +149,7 @@ export default function Privacy(props) {
                 <h2 className="font-bold text-gray-600 my-4">
                   {getPrivacyText[privacyData.id].num + ". " + getPrivacyText[privacyData.id].title}
                 </h2>
-                <p className="text-gray-400 text-sm leading-7">
+                <p className="text-gray-400 text-xs leading-7">
                   {getPrivacyText[privacyData.id].description}
                 </p>
               </div>
@@ -185,7 +185,7 @@ export default function Privacy(props) {
           }
         </div>
 
-        <div className="border border-gray-400 bg-gray-50 p-4 ml-12 w-72 h-fit">
+        <div className="border border-gray-400 bg-gray-50 p-4 ml-12 w-64 h-fit">
           <h2 className="font-bold text-gray-600 mb-4 text-lg">
             Table of Contents:
           </h2>
@@ -197,7 +197,7 @@ export default function Privacy(props) {
                   item.title === getPrivacyText[privacyData.id].title
                     ? "font-bold text-gray-600"
                     : "text-gray-400",
-                  "text-sm leading-10"
+                  "text-xs leading-8 "
                 )}
                 onClick={() => setPrivacyData({ type: "NAVIGATE", num: item.num })}
               >

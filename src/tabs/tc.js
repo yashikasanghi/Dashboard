@@ -121,7 +121,7 @@ export default function TC(props) {
         />
       )}
 
-      <hr className="border-red-700 w-40 z-10 tc-margin" />
+      <hr className="border-red-700 w-36 z-10 tc-margin" />
       <div className="p-6 flex">
         <div className="w-2/3">
           <div className="flex">
@@ -143,7 +143,7 @@ export default function TC(props) {
                 <h2 className="font-bold text-gray-600 my-4">
                   {getTCText[tcData.id].num + ". " + getTCText[tcData.id].title}
                 </h2>
-                <p className="text-gray-400 text-sm leading-7">
+                <p className="text-gray-400 text-xs leading-7">
                   {getTCText[tcData.id].description}
                 </p>
               </div>
@@ -179,7 +179,7 @@ export default function TC(props) {
           }
         </div>
 
-        <div className="border border-gray-400 bg-gray-50 p-4 ml-12 w-72 h-fit">
+        <div className="border border-gray-400 bg-gray-50 p-4 ml-12 w-64 h-fit">
           <h2 className="font-bold text-gray-600 mb-4 text-lg">
             Table of Contents:
           </h2>
@@ -191,7 +191,7 @@ export default function TC(props) {
                   item.title === getTCText[tcData.id].title
                     ? "font-bold text-gray-600"
                     : "text-gray-400",
-                  "text-sm leading-10"
+                  "text-xs leading-8"
                 )}
                 onClick={() => setTCData({ type: "NAVIGATE", num: item.num })}
               >
