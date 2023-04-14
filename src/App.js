@@ -4,12 +4,14 @@ import Home from "./pages/home";
 import { EditFormProvider } from "./context/editFormContext";
 import { ContactProvider } from "./context/contactContext";
 import { StatementProvider } from "./context/statementContext";
+import { AddressProvider } from "./context/addressContext";
 
 function App() {
   return (
     <EditFormProvider>
       <ContactProvider>
         <StatementProvider>
+          <AddressProvider>
           <Routes>
             <Route path="/" element={<Home />}>
               <Route path="/orders"></Route>
@@ -21,6 +23,7 @@ function App() {
               <Route path="/payment-info"></Route>
             </Route>
           </Routes>
+          </AddressProvider>
         </StatementProvider>
       </ContactProvider>
     </EditFormProvider>

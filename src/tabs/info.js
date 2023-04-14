@@ -12,11 +12,13 @@ import {
 } from "@heroicons/react/20/solid";
 import { ContactContext } from "../context/contactContext";
 import { StatementContext } from "../context/statementContext";
+import { AddressContext } from "../context/addressContext";
 
 export default function Info(props) {
   const [editModal, setEditModal] = useState(false);
   const contactCtx = useContext(ContactContext);
   const statementCtx = useContext(StatementContext);
+  const addressCtx = useContext(AddressContext)
 
   const dummyData = [
     {
@@ -56,7 +58,7 @@ export default function Info(props) {
       key: "address",
       title: "Address",
       content:
-        "C-1 / 351 / 4, GIDC Makarpura, Vadodara - 390010, Gujrat, India",
+      <span>{addressCtx.address}</span>,
       icon: <MapPinIcon className="h-6 w-6 text-gray-400 mr-1 inline-block" />,
     },
     {
